@@ -1,0 +1,25 @@
+.heading-container {
+    background-color: #15192a;
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    flex-direction: row;
+   
+}
+
+.child-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+p {
+    margin: 0px;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+}
+
+body {
+    margin: 0;
+    font-family: roboto;
+}

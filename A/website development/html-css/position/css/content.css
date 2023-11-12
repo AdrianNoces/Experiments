@@ -1,0 +1,12 @@
+.div {
+	background: lightpink;
+	height: 300px;
+	width: 300px;
+	z-index: 3;
+}
+
+.absolute {
+	position: absolute;
+	background: red;
+	z-index: 1;
+}

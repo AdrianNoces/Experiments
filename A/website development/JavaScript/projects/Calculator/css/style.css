@@ -1,0 +1,133 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url('background/0.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  backdrop-filter: blur(10px);
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    background: url('background/1.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(30px);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+  //padding: 30px 20px 20px 20px;
+  animation: test 5s ease-in-out 0s infinite reverse;
+  position: relative;
+ // border: 1px solid black;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+main:active {
+  transform: rotateY(180deg);
+}
+
+@keyframes test {
+  0% {
+    top: 0;
+    left:0;
+  //  opacity: 1;
+  }
+
+  50% {
+    top: 20px;
+  }
+
+  100% {
+    top: 0;
+   // left: 200px;
+  //  opacity: 0;
+  }
+}
+
+.buttonsContainer {
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+input {
+  display: flex;
+  text-align: end;
+  height: 100px;
+  font-size: 16px;
+  padding: 0 20px 0 0;
+  font-weight: bold;
+  outline: 0;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  background: transparent;
+  text-shadow: 0 0 15px black;
+}
+
+.row1 button,
+.row2 button,
+.row3 button,
+.row4 button,
+.row5 button {
+  width: 60px;
+  height: 50px;
+  border: none;
+  background: transparent;
+  color: white;
+  font-weight: bold;
+}
+
+.row1 .symbol,
+.row2 .symbol,
+.row3 .symbol,
+.row4 .symbol {
+  background: white;
+  color: black;
+}
+
+.row5 {
+  display: flex;
+  flex-direction: row;
+}
+
+.row5 .extend {
+  flex: 1;
+}
+
+.row5 .symbol {
+  margin: 0;
+  background: #FD5825;
+}
+
+.row5 button {
+  margin: 0 5px 0 0;
+}
+
+.row1 .AC {
+  color: #FD5825;
+}
+
+.row1 button {
+  color: black;
+}

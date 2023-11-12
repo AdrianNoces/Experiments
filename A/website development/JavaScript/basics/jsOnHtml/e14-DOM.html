@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM</title>
+</head>
+<body>
+  <button>hello</button>
+  <button class="js-button">second button</button>
+  <button id="9b" onclick="b()">9b</button>
+  
+  <p>
+  <input type="text" placeholder="your name" id="name" onkeydown="enter(event)">
+  <button onclick="submit()">Submit</button>
+  <p id="display"></p>
+  </p>
+  
+  <input type="text" id="typing" placeholder="Type something" onkeyup="whil()">
+  <p id="text"></p>
+  <script>
+  //  console.log(document.body.innerHTML);
+    document.title = 'Document object model';
+    
+  //  console.log(document.querySelector('.js-button').innerHTML);
+    
+    document.querySelector('.js-button')
+      .innerHTML = 'second element changed';
+    
+    document.querySelector('button')
+      .innerHTML = 'First button';
+      
+  //  document.body.innerHTML = '<button>hi</button>';
+  
+  function b() {
+      const button = document.getElementById('9b')
+      if (button.textContent === '9b') {
+        button.textContent = '9b done!'
+      } else {
+        button.textContent = '9b'
+      }
+    }
+    
+    function submit() {
+      let name = document.getElementById('name').value
+      let display = document.getElementById('display')
+      
+      display.textContent = `your name is: ${name}`
+      
+    }
+    
+    function enter() {
+      if (event.key === 'Enter') {
+        submit()
+      }
+    }
+    
+    function whil() {
+      let text = document.getElementById('text')
+      let typing = document.getElementById('typing').value
+      text.textContent = typing
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+.sidebar {
+	position: fixed;
+	background: gray;
+	color: white;
+	
+	top: 55px;
+	left: 0;
+	bottom: 0;
+}
+
+.a {
+	position:absolute;
+	right:0;
+	top:0;
+	background: red;
+}

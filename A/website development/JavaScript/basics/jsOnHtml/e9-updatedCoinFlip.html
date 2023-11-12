@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>coinflip</title>
+    <style>
+      button {
+        padding: 10px;
+        border: none;
+        border-radius: 18px;
+        color: white;
+        background: #FD5825;
+        margin: 0 5px;
+      }
+      
+      div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      body {
+        background: #222222;
+      }
+      
+      p,
+      h3,
+      h5 {
+        color: white;
+      }
+      
+      .container {
+        display: grid;
+        grid-template-rows: 20px 20px 1fr;
+      }
+      
+      .b {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 5px;
+      }
+    </style>
+</head>
+<body>
+  <div>
+  <div class="container">
+  <h3>coinFlip</h3>
+  <h5 class="result"></h5>
+  <h5><p>guess: <span class="player">none</span> coin: <span class="random">none</span></p>
+  <p>wins: <span class="wins">0</span>, losses: <span class="losses">0</span></p></h5>
+  <div class="b">
+  <button onclick="gamePlay('head')">head</button>
+  <button onclick="gamePlay('tails')">tails</button>
+  <button onclick="reset()">reset game</button>
+  </button>
+  </div>
+  </div>
+  <script>
+    const coin = {
+      head: 'head',
+      tails: 'tails'
+    }; 
+    
+    const score = JSON.parse(localStorage.getItem('s')) || {
+      wins: 0,
+      losses: 0
+    };
+    
+    let playerGuess = '';
+   
+    function gamePlay(move) {
+      const player = document.querySelector('.player')
+      const random = document.querySelector('.random')
+      const wins = document.querySelector('.wins')
+      const losses = document.querySelector('.losses')
+      const result = document.querySelector('.result')
+      const randomMove = randomChoice()
+      let results = '';
+      
+      if (move === randomMove) {
+        results = 'won!';
+        score.wins ++;
+        player.innerHTML = `${move}`;
+        random.innerHTML = `${randomMove}`;
+        wins.innerHTML = `${score.wins}`;
+        losses.innerHTML = `${score.losses}`
+        result.innerHTML = `You ${results}`
+      } else if (move) {
+        results = 'lose!'
+        score.losses++
+        player.innerHTML = `${move}`;
+        random.innerHTML = `${randomMove}`;
+        wins.innerHTML = `${score.wins}`;
+        losses.innerHTML = `${score.losses}`
+        result.innerHTML = `You ${results}`
+      }
+      
+      
+      
+      localStorage.setItem('s',JSON.stringify(score))
+    }
+    
+    function randomChoice() {
+    
+      const random = Math.random()   
+      let randomMove = '';
+      
+      if (random >= 0 && random <= 1/2) {
+        randomMove = coin.head
+      } else {
+        randomMove = coin.tails
+      }
+      return randomMove;
+    }
+    
+    function reset() {
+      const player = document.querySelector('.player')
+      const random = document.querySelector('.random')
+      const wins = document.querySelector('.wins')
+      const losses = document.querySelector('.losses')
+      player.innerHTML = 'none';
+      random.innerHTML = 'none';
+      wins.innerHTML = 0;
+      losses.innerHTML = 0;
+      score.wins = 0;
+      score.losses = 0;
+      localStorage.removeItem('s');
+      return;
+    }
+  </script>
+</body>
+</html>

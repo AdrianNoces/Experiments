@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Page title</title>
+</head>
+<body>
+  <button id="button">click</button>
+  <div class="" id="clicked"></div>
+  <script>
+    const object = {
+      print: function() {
+        console.log('hello');
+      }
+    };
+    
+    object.print();
+    
+    function display(param) {
+      console.log(param);
+    };
+    
+    display('hello1')
+    
+    function run(param) {
+      param();
+    };
+    
+    run(function () {
+      console.log('hello2');
+    });
+    
+    setTimeout(function() {
+      console.log('hello3')
+    },2000)
+    
+    setInterval(function() {
+      console.log('hello4')
+    }, 2000)
+    
+    const button = document.getElementById('button');
+    
+    const eventListener = () => {
+      let clicked = document.getElementById('clicked')
+      clicked.textContent = 'clicked'
+    }
+    
+    button.addEventListener('click', eventListener)
+    
+    button.removeEventListener('click', eventListener)
+    
+    button.addEventListener('click', () => {
+      let clicked = document.getElementById('clicked')
+      clicked.textContent = 'clicked'
+      })
+  </script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>booleans</title>
+</head>
+<body>
+    <script>
+        /* booleans true and false */
+        
+        console.log(10 < 5);
+        console.log(10 > 5);
+        console.log(10 === '10');
+        console.log(10 !== 5);
+        
+        if (10 !== 4) {
+            console.log("yes");
+        } else {
+            console.log("no");
+        }
+        
+        if (false) {
+            console.log("hello");
+        } else {
+            console.log("else");
+        }
+        
+        const age = 16;
+        const legalAge = 16;
+        const almostLegal = 14;
+        
+        if (age >= legalAge) {
+            console.log('you can now drive');
+        } else if (age >= almostLegal) {
+            console.log('you are almost there');
+        } else {
+            console.log('you can not still drive');
+        }
+        
+        /* And operator && if there's a false it will always be false */
+        console.log(true && true);
+        console.log(true && false);
+        console.log(false && false);
+        
+        /* OR operator || if there's true it will always be true */
+        console.log(true || true);
+        console.log(true || false);
+        console.log(false || false);
+        
+        /* not value */
+        console.log(!true);
+        console.log(!false);
+        
+        /* truthy and falsy */
+        if (0) {
+            console.log('truthy')
+        }
+        
+        const cartQuantity = 5;
+        
+        if (cartQuantity) {
+            console.log('cart has product')
+        }
+        
+        console.log(!0)
+        
+        /* the value of '?' is 'truthy' and the value of ':' is 'falsy' */
+        let result = true ? 'truthy' : 'falsy'
+        console.log(result)
+        result =  false ? 'truthy' : 'falsy'
+        console.log(result)
+        
+        let message = false && console.log('hi')
+        console.log(message)        
+        message = true && console.log('hello')
+        
+        let currency = 'EUR' || 'USD';
+        console.log(currency)
+        
+        currency = undefined || 'USD';
+        console.log(currency)
+        
+    </script>
+</body>
+</html>

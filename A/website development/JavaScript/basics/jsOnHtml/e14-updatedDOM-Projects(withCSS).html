@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Page title</title>
+  <style>
+    body {
+      font-family: arial;
+    }
+    
+    .subscribe {
+      background: black;
+      padding: 10px 15px;
+      font: normal normal bold 16px arial;
+      border: none;
+      border-radius: 50px;
+      color: white;
+      transition: babackground 0.15s, color 0.15s;
+      margin: 0 0 30px 0;
+    }
+    
+    .is-subscribed {
+      background: rgb(240,240,240);
+      color: black;
+    }
+    
+    .costInput {
+      padding: 10px;
+      font-size: 15px;
+    }
+    
+    .submitButton {
+      padding: 12px 15px;
+      font: bold 15px arial;
+      color: white;
+      border: none;
+      background: green;
+    }
+  </style>
+</head>
+<body>
+  <p>YouTube Subscribe button</p>
+  
+  <button onclick="subscribe()" class="js-button subscribe">
+    Subscribe
+  </button>
+  
+  <p>Rock Paper Scissors</p>
+  <a href="e6-updatedRockPaperScissors(withScore)(withDOM).html">Click here</a>
+  
+  <p>Amazon Shipping Calculator</p>
+  <input class="js-cost costInput" type="number" placeholder="Cost of Order" onkeydown="onkey(event)">
+  <button onclick="calculation()" class="submitButton">Calculate</button>
+  <p class="js-costUpdate"></p>
+  
+
+  <script>
+    function subscribe() {
+      let buttonElem = document.querySelector('.js-button')
+      
+    //  console.log(typeof buttonElem)
+      
+      if (buttonElem.innerText === 'Subscribe') {
+        buttonElem.innerHTML = 'Subscribed';
+        buttonElem.classList.add('is-subscribed');
+      } else {
+        buttonElem.innerHTML = 'Subscribe';
+        buttonElem.classList.remove('is-subscribed');
+      }
+    }
+    
+    function calculation() {
+      let inputCost = Number(document.querySelector('.js-cost').value)
+      
+      if (inputCost < 40) {
+        const sum = inputCost + 10
+        
+        inputCost = sum.toFixed(2)
+      }
+      
+      document.querySelector('.js-costUpdate')
+        .innerHTML = `$${inputCost}`;
+        
+        return
+        console.log(typeof inputCost)
+    }
+    
+    function onkey(event) {
+      if (event.key === 'Enter') {
+        calculation()
+      }
+    }
+    
+    
+  </script>
+</body>
+</html>

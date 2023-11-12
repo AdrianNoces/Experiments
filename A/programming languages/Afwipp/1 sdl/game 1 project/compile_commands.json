@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/storage/emulated/0/Afwipp/1 sdl/game 1 project",
+  "command": "/data/data/ru.iiec.cxxdroid/files/bin/clang++   -I\"/storage/emulated/0/Afwipp/1 sdl/game 1 project/include\" -I\"/storage/emulated/0/Afwipp/1 sdl/game 1 project/src\"  -Wall -std=c++14 -fallow-void-main   -o CMakeFiles/Main.dir/src/main.cpp.o -c \"/storage/emulated/0/Afwipp/1 sdl/game 1 project/src/main.cpp\"",
+  "file": "/storage/emulated/0/Afwipp/1 sdl/game 1 project/src/main.cpp"
+}
+]

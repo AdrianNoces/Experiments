@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cart quantity</title>
+</head>
+<body>
+    <p>Cart quantity</p>
+    
+    <button onclick="console.log(`Cart quantity: ${cartQuantity}`);">Show Quantity</button>    
+    <button onclick="updateCartQuantity(1)">Add to Cart</button>   
+    <button onclick="updateCartQuantity(2)">+2</button>    
+    <button onclick="updateCartQuantity(3)">+3</button>   
+    <button onclick="updateCartQuantity(4)">+4</button>  
+    <button onclick="updateCartQuantity(5)">+5</button>   
+    <button onclick="reset()">Resert Cart</button> 
+    <button onclick="updateCartQuantity(-1)">Remove from cart</button>    
+    <button onclick="updateCartQuantity(-2)">-2</button>   
+    <button onclick="updateCartQuantity(-3)">-3</button>    
+   
+    <script>
+        let cartQuantity = 0;
+        
+        function updateCartQuantity(howMuch) {
+        
+          cartQuantity += howMuch;
+                  
+          if (cartQuantity > 10) {
+              addition = 10 - cartQuantity;
+              cartQuantity += addition;
+              console.log(`Cart quantity: ${cartQuantity}`);
+              alert("You can't add anymore the cart is full!");      
+              return 0;
+          } else if (cartQuantity < 0) {
+              subtract = 0 - cartQuantity;
+              cartQuantity += subtract;
+              console.log(`Cart quantity: ${cartQuantity}`);
+              alert("You cant remove anymore the cart is empty!")
+              return 0;
+          }
+          
+          console.log(`Cart quantity: ${cartQuantity}`);
+        }
+        
+        function reset() {
+          cartQuantity = 0;
+          console.log('Cart was reset.');
+          console.log(`Cart quantity: ${cartQuantity}`);
+        }
+    </script>
+</body>
+</html>

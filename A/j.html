@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Page title</title>
+</head>
+<body>
+  <script>
+    const add = function() {
+      setInterval(function() {
+        console.log(2 + 5)
+      },1000)
+    }
+    
+    add()
+    
+    function runtwice(fun) {
+      setInterval(function() {
+        fun()
+      },1000)
+    }
+    
+    runtwice(function() {
+      console.log('12b')
+    })
+    
+  </script>
+</body>
+</html>

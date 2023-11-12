@@ -1,0 +1,54 @@
+p {
+  font-family: arial;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+img {
+  width: 300px;
+}
+
+.video-preview {
+	display: inline-block;
+	margin-right: 15px;
+}
+
+.video-thumnail {
+	margin-bottom: 12px;
+}
+
+.channel-profile {
+  width: 50px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.profile-picture {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 180px;
+}
+
+.video-info {
+	display:inline-block;
+	width: 200px;
+}
+
+.video-title {
+	font-size: 14px;
+	margin-bottom: 12px;
+	font-weight: bold;
+	line-height: 20px;
+}
+
+.channel-name,
+.views-date {
+	font-size: 12px;
+	color: rgb(96,96,96)
+}
+
+.channel-name {
+	margin-bottom: 4px;
+}

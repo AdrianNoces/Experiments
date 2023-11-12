@@ -1,0 +1,71 @@
+body {
+	margin: 0;
+}
+
+.container {
+	display: flex;
+	font-family: arial;
+	border-radius: 10px;
+	padding : 10px;
+	width: 380px;
+}
+
+.icon {
+	border-radius: 50%;
+	width: 40px;
+	margin: 0 10px 0 0;
+}
+
+img {
+	width: 100%;
+}
+
+.info {
+	font-size: 15px;
+	max-width: 100%;
+}
+
+.name {
+	font-weight: bold;
+}
+
+.name-link {
+	font-weight: bold;
+	color: rgb(96,96,96);
+}
+
+.text-info {
+	margin: 0 0 10px 0;
+}
+
+.text-with-picture-info {
+	display: flex;
+	border-radius: 10px;
+	width: 100%;
+	box-shadow: 0 0 2px rgba(0,0,0,0.5);
+	align-items: center;
+}
+
+.text {
+	
+}
+
+.title {
+	color: rgb(96,96,96);
+}
+
+.description {
+	
+}
+
+.box {
+	width: 100px;
+	border-radius: 10px 0 0 10px;
+	aspect-ratio: 1/1;
+	background: rgb(200,200,200);
+	margin: 0 10px 0 0;
+}
+
+p {
+	margin: 0;
+}

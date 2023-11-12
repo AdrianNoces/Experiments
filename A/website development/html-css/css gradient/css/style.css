@@ -1,0 +1,101 @@
+html,body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(180deg,#19206a,#2f726e);
+  background-repeat: no-repeat;
+}
+
+@keyframes example {
+	
+  0% {
+    background: rgba(255,0,0,1);
+    left: 0;
+    top: 0;
+  }
+  
+  50% {
+    background: rgba(0,255,0,0.8);
+    left: 200px;
+    right:0;
+  }
+  
+  100% {
+    background: rgba(0,0,255,0);
+    left: 0;
+    right: 200;
+    top: 400px;
+  }
+}
+
+.box1 {
+  height: 100px;
+  width: 100px;
+  position: relative;
+  animation: example 3s linear 1s infinite normal;
+  
+/* animation-name: example;
+  animation-duration: 3s;
+  background: red;
+  position: relative;
+  animation-delay: 1;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;*/
+}
+
+.box2 {
+  height: 100px;
+  width: 100px;
+  position: relative;
+  animation: example 2s ease-in 1s infinite reverse;
+  
+  /*
+  animation-name: example;
+  animation-duration: 2s;
+  background: red;
+  animation-delay: 1;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+  animation-timing-function: ease-in;
+  animation-fill-mode: backwards;
+  */
+}
+
+.box3 {
+  height: 100px;
+  width: 100px;
+  position: relative;
+  animation: example 4s ease-out 1s infinite alternate;
+  
+  /*
+  animation-name: example;
+  animation-duration: 4s;
+  background: red;
+  animation-delay: 1;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-out;
+  */
+}
+
+.box4 {
+  height: 100px;
+  width: 100px;
+  position: relative;
+  animation: example 2s ease-in-out 1s infinite alternate-reverse;
+  
+  /*
+  animation-name: example;
+  animation-duration: 2s;
+  background: red;
+  animation-delay: 1;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+  animation-timing-function: ease-in-out;
+  */
+}

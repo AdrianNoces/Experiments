@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Page title</title>
+</head>
+<body>
+  <script>
+    const stringArray = [ 'hello','world','nice','search','good', 'search']
+    
+    function checkIndex(array) {
+      const foundOrNot = ['not','found']
+      const object = {}
+      for (i = 0; i < array.length; i++) {
+        if (array[i] === 'search') {
+          console.log(`${foundOrNot[1]} at index [${i}]`)
+        } else {
+          console.log(foundOrNot[0])
+        }
+        
+        if (typeof array[i] === 'string') {
+          object[array] = (object[array] || 0) + 1
+        }
+        console.log(object[array])
+      }
+    }
+    
+    checkIndex(stringArray)
+  </script>
+</body>
+</html>

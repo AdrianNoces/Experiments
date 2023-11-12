@@ -1,0 +1,42 @@
+
+.container {
+  display: block;
+  margin: auto;
+  width: 400px;
+  vertical-align: middle;
+  margin-top:40vh;
+  align-content:center;
+  
+}
+
+.ff {
+  margin-bottom: 10px;
+}
+
+input {
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 11px;
+}
+
+.email {
+  width: 382px;
+  margin-bottom: 10px;
+}
+
+.signup {
+  width: 396px;
+  border: none;
+  border-radius: 5px;
+  background-color: #6282ec;
+  color: white;
+  font-weight: bold;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 15px;
+  
+}

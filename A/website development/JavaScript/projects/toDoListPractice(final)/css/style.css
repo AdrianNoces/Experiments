@@ -1,0 +1,158 @@
+body {
+  font-family: arial;
+  padding: 70px 0 80px 0;
+  margin: 0;
+  background: white;
+}
+
+nav {
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 60px;
+  align-items: center;
+  display: flex;
+  overflow: hidden;
+  padding: 0 0 0 10px;
+  background: white;
+}
+
+.logo {
+  width: 130px;
+}
+
+.input-container {
+ background: white;
+ border-width: 1px 0 0 0;
+ border-color: rgba(0,0,0,0.2);
+ border-style: solid;
+ position: fixed;
+ bottom: 0;
+ right: 0;
+ left: 0;
+ height: 80px;
+}
+
+.todoInput {
+  box-shadow: 0 0 3px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: space-between;
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin: 0 0 20px 0;
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  right: 10px;
+  background: white;
+}
+
+.dateInput {
+  border: none;
+  margin: 0 5px 0 0;
+  text-align: center;
+  background: transparent;
+  outline: none;
+  flex: 1;
+  font-weight: bold;
+}
+
+.displayInput {
+  border: none;
+  outline: none;
+  padding: 0 0 0 10px;
+  width: 130px;
+  flex: 1;
+  color: #565656;
+  font-weight: bold;
+}
+
+.addButton {
+  border: none;
+  background: transparent;
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 18px;
+  font-size: 15px;
+  transition: color 0.15s;
+  color: #76323F;
+}
+
+.addButton:active {
+  color: gray;
+}
+
+.container {
+  display: flex;
+  max-width: 100%;
+  padding: 10px 10px 10px 20px;
+  border-radius: 10px;
+  margin: 5px;
+  background: #D7CEC7;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.todo-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 5px;
+  column-gap: 5px;
+}
+
+@media only screen and (min-width: 768px) {
+  .todo-list {
+    grid-template-columns: 1fr;
+  }
+   
+  .displayInput {
+    flex: 1;
+  }
+
+  .dateInput {
+    flex: 1;
+  }
+}
+
+.childContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  flex: 1;
+  row-gap: 5px;
+}
+
+.delButton {
+  border: none;
+  background: transparent;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 10px;
+  height: auto;
+  color: #565656;
+  transition: color 0.15s;
+}
+
+.delButton:hover {
+  color: darkred;
+}
+
+.name {
+  font-weight: bold;
+  max-width: 300px;
+  white-space: preserve nowrap;
+  overflow-wrap: break-word;
+  color: #76323F;
+}
+
+.date {
+  background: #C09F80;
+  color: darkgreen;
+  display: flex;
+  width: 100px;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border-radius: 10px;
+  font-weight: bold;
+}
